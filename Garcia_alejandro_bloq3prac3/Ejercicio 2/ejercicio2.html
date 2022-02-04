@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ejercicio 2</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body style="background-color: blue;">
+    <input type="button" id="saludo" value="Saludo" />
+    <input type="button" id="despedida" value="Despedida" />
+
+    <br><br>
+    <p style="text-align: center; opacity: 0.1;">Bienvenidos a esta aplicacion</p>
+<script>
+    $("#saludo").click(function(){
+        $("p").css("opacity", "1");
+    });
+    $("#despedida").click(function(){
+        $("p").css("opacity", "0.1");
+    });
+   
+
+</script>
+</body>
+</html>

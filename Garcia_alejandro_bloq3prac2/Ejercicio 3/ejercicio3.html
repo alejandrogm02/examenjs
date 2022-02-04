@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Ejercicio 3</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<input type="button" value="Mostrar fichero XML">
+<div></div>
+<script>
+    $("input").click(function(){
+        cadena = "";
+    $.get("documento.xml", function (xml) {
+    $(xml).find("animal").each(function () {
+       var nombre = $(this).find('nombre').text();
+       var tipo = $(this).find('tipo').text();
+       var color = $(this).find('color').text();
+       var edad = $(this).find('edad').text();
+       
+       cadena += nombre + " " + tipo + " " + color + " " + edad + "<br>";
+        $("div").html(cadena);
+    });
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Ejercicio 3</title>
+<link rel="stylesheet" href="ejercicio3.css">
+<style>
+  #cube{
+    position: relative;
+    animation-name: cuadrado;
+    animation-duration: 4s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes cuadrado {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+    <input type="button" id="start" value="Iniciar Efecto" />
+    <input type="button" id="stop" value="Parar Efecto" />
+
+    <br><br>
+    <section class="container">
+        <div id="cube">
+          <figure class="back"></figure>
+          <figure class="left"></figure>
+          <figure class="bottom"></figure>
+          <figure class="front"></figure>
+          <figure class="right"></figure>
+          <figure class="top"></figure>
+        </div>
+      </section>
+    <script>
+    $("#start").click(function(){
+      $('#cube').css({'animation-play-state' : 'running'})
+    });
+    $("#stop").click(function(){
+      $('#cube').css({'animation-play-state' : 'paused'})
+    });
+   
+
+</script>
+</body>
+</html>

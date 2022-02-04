@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ejercicio 1</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+<style type="text/css">
+.clasecss{
+    color: green;
+}
+</style>
+</head>
+<body>
+<form>
+<div>Primera capa del documento</div>
+<div>Segunda capa del documento</div>
+<div>Tercera capa del documento</div>
+<script>
+    $(document).ready(function(){
+        alert("Hay " + $("div").length + " capas creadas");
+        $("div").addClass("clasecss");
+    })
+</script>
+</body>
+</html>

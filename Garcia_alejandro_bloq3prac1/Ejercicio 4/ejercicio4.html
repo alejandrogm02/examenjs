@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Ejercicio 4</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<form>
+<input type="text" name="num1">
+<input type="text" name="num2">
+<input type="checkbox"> 
+</form>
+
+<script>
+    $("input[type=checkbox").change(function(){
+        if($('input[type=checkbox]').prop("checked")){
+            value = $('input[name="num1"]').val();
+            value2 = $('input[name="num2"]').val();   
+            suma = parseInt(value) + parseInt(value2);
+            $("form").append("<input type='text' id='suma'>");
+            $("#suma").attr({"value": suma})
+        }else{
+            $("#suma").remove();
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Ejercicio 3</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<input type="button" value="Mostrar fichero de texto">
+<p></p>
+
+<script>
+    $("input").click(function(){
+        $.ajax({method: "GET", url: "documento.js", dataType: "script"});
+});
+</script>
+</body>
+</html>

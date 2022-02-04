@@ -1,0 +1,29 @@
+<html>
+ <head>
+   <title>Ejercicio 3</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+   <script>
+     $.fn.superposicion = function (opciones) {
+       let palabras = $.extend({
+         fruta1 : "mandarina",
+         fruta2 : "uva"
+       }, opciones)
+       $(this).html("No me gusta la " + palabras.fruta1 + " y el " + palabras.fruta2);
+       return this;
+     };
+ 
+     $(function () {
+       $("#boton").click(function (evento) {
+         $("#contenido").superposicion({
+           fruta1: "pera",
+           fruta2: "platano"
+         });
+       });
+     });
+   </script>
+ </head>
+ <body>
+   <input type="button" id="boton" value="Extend" />
+   <p id="contenido"></p>
+ </body>
+</html>

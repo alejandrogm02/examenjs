@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Ejercicio 1</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+    <input type="button" id="hide" value="Hide" />
+    <input type="button" id="fade" value="Fade" />
+    <input type="button" id="slide" value="Slide" />
+    <input type="button" id="animate" value="Animate" /><p></p>
+
+    <img src="https://img.freepik.com/foto-gratis/fondo-negro-vacio-luz-iluminada-ademas_93675-45849.jpg?size=626&ext=jpg" id="imagen">
+<script>
+    $("#hide").click(function(){
+        $("img").hide();
+    });
+    $("#fade").click(function(){
+        $("img").fadeIn(1200);
+    });
+    $("#slide").click(function(){
+        $("img").slideDown();
+    });
+    $("#animate").click(function(){
+        $("#imagen").animate({ 
+            width: "5%",
+        }, 1000); 
+        $("#imagen").animate({ 
+            width: "100%", 
+        }, 1000); 
+    });
+   
+
+</script>
+</body>
+</html>

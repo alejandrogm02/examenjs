@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ejercicio 3</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<form>
+<p> Este parrafo cambiara de color segun el valor del radio seleccionado.</p><br> <br>
+<input type="radio" value="green" name="radio"> <span>Verde</span> <br>
+<input type="radio" value="red" name="radio"> <span>Rojo</span> <br>
+<input type="radio" value="blue" name="radio"> <span>Azul</span> <br>
+
+<script>
+    $("input").change(function(){
+        value = $('input[name="radio"]:checked').val();
+        if($('input[name="radio"]:checked')){
+            $("p").css({"background-color": value});
+        }
+    })
+    
+</script>
+</body>
+</html>

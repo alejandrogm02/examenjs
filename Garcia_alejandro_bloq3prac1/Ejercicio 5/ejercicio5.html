@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ejercicio 5</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<style>
+    .mouseover{
+        font-size: 16pt;
+    }
+</style>
+<body>
+<p>Este párrafo cambiará de tamaño al pasar el ratón por encima</p>
+
+<script>
+    $("p").mouseover(function(){
+        $("p").addClass("mouseover");
+    })
+    $("p").mouseout(function(){
+        $("p").removeClass("mouseover");
+    })
+</script>
+</body>
+</html>

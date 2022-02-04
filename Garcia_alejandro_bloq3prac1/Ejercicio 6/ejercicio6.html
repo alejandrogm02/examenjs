@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Ejercicio 6</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnqbyX8bCH1K2mJ3D1FhpSgtCtF7uwVRd8Q&usqp=CAU" id="imagen">
+<br> <br>
+<input type="button" value="fadeOut">
+<input type="button" value="slideDown">
+<input type="button" value="slideUp">
+
+<script>
+    $("input[value=fadeOut]").click(function(){
+        $("img").fadeOut(2000);
+    })
+    $("input[value=slideDown]").click(function(){
+        $("img").slideDown(3000);
+    })
+    $("input[value=slideUp]").click(function(){
+        $("img").slideUp(1000);
+    })
+</script>
+</body>
+</html>

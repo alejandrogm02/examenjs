@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ejercicio 1</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<input type="button" value="Mostrar fichero de texto">
+<p></p>
+
+<script>
+    $("input").click(function(){
+        objetoAjax = $.ajax({url: "documento.txt", success: function(result){
+        $("p").html(result)
+    }});
+
+    objetoAjax.fail(function(){
+        alert("Error");
+    });
+   
+});
+</script>
+</body>
+</html>

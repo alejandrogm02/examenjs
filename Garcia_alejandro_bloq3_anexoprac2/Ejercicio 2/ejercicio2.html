@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Ejercicio 2</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+</head>
+<body>
+<input type="button" value="Mostrar fichero html">
+<div></div>
+<script>
+    $("input").click(function(){
+        $.ajax({type: "POST", url: "documento.php",
+        beforeSend: function(){
+            $("div").html("<img src='cargando.gif' alt='loading'>");
+        }
+    })
+    .done(function (result) {
+        $("div").html(result);
+    })
+    .fail(function(request,status,error){
+        $("div").html(error);
+    });
+    });
+</script>
+</body>
+</html>
